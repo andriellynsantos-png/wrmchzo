@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WrmLink - Cadastro</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-container">
+    <div class="login-box">
+      <h1>WrmLink</h1>
+      <p>Crie sua conta</p>
+
+      <input type="text" id="nomeCadastro" placeholder="Digite seu nome">
+      <input type="email" id="emailCadastro" placeholder="Digite seu e-mail escolar">
+      <input type="password" id="senhaCadastro" placeholder="Crie uma senha">
+
+      <button onclick="fazerCadastro()">Cadastrar</button>
+
+      <a href="login.html" class="link">Já tenho conta</a>
+    </div>
+  </div>
+
+  <script>
+    function fazerCadastro() {
+      const nome = document.getElementById("nomeCadastro").value;
+      const email = document.getElementById("emailCadastro").value;
+      const senha = document.getElementById("senhaCadastro").value;
+
+      if (nome === "" || email === "" || senha === "") {
+        alert("Preencha todos os campos!");
+      } else {
+        alert("Cadastro realizado com sucesso! Simulação.");
+        window.location.href = "inicio.html";
+      }
+    }
+  </script>
+
+</body>
+</html>

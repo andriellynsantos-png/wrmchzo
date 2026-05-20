@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WrmLink - Feed</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <header class="topo">
+    <a href="index.html" class="logo">WrmLink</a>
+
+    <nav class="menu">
+      <a href="inicio.html">Início</a>
+      <a href="perfil.html">Perfil</a>
+      <a href="explorar.html">Explorar</a>
+      <a href="feed.html">Feed</a>
+      <a href="login.html" class="btn-login">Login</a>
+    </nav>
+  </header>
+
+  <main class="feed-pagina">
+    <section class="feed-topo">
+      <h1>Feed Escolar</h1>
+      <p>Veja as postagens e compartilhe novidades com outros alunos.</p>
+    </section>
+
+    <section class="criar-postagem">
+      <div class="criar-topo">
+        <img src="img/minhafoto.jpg" alt="Minha foto">
+
+        <div>
+          <h3>Andriellyn</h3>
+          <span>2º Ano • DS</span>
+        </div>
+      </div>
+
+      <textarea id="textoPostagem" placeholder="No que você está pensando?"></textarea>
+
+      <input type="file" id="imagemPostagem" accept="image/*">
+
+      <div class="acoes-postagem">
+        <button onclick="criarPostagem()">Publicar</button>
+      </div>
+    </section>
+
+    <section class="lista-postagens" id="listaPostagens">
+      <div class="post-card">
+        <div class="post-topo-card">
+          <img src="img/minhafoto.jpg" alt="Foto do usuário">
+
+          <div>
+            <h3>Andriellyn</h3>
+            <span>2º Ano • DS</span>
+          </div>
+        </div>
+
+        <p class="post-texto">
+          Bem-vindos ao WrmLink! Esse espaço foi criado para compartilhar ideias, novidades e conectar alunos da escola.
+        </p>
+
+        <div class="post-acoes">
+          <button onclick="curtirPost(this)">❤ 0</button>
+          <button onclick="mostrarComentarios(this)">💬 Comentários</button>
+        </div>
+
+        <div class="comentarios" style="display: none;">
+          <div class="lista-comentarios"></div>
+          <input type="text" placeholder="Escreva um comentário..." class="input-comentario">
+          <button onclick="comentarPost(this)">Enviar</button>
+        </div>
+      </div>
+
+      <div class="post-card">
+        <div class="post-topo-card">
+          <img src="https://i.pravatar.cc/100?img=12" alt="Foto do usuário">
+
+          <div>
+            <h3>Mickael</h3>
+            <span>2º Ano • ADM</span>
+          </div>
+        </div>
+
+        <p class="post-texto">
+          Finalizando mais uma etapa do projeto. A interface está ficando muito boa!
+        </p>
+
+        <div class="post-acoes">
+          <button onclick="curtirPost(this)">❤ 0</button>
+          <button onclick="mostrarComentarios(this)">💬 Comentários</button>
+        </div>
+
+        <div class="comentarios" style="display: none;">
+          <div class="lista-comentarios"></div>
+          <input type="text" placeholder="Escreva um comentário..." class="input-comentario">
+          <button onclick="comentarPost(this)">Enviar</button>
+        </div>
+      </div>
+    </section>
+  </main>
+
+  <script src="script.js"></script>
+</body>
+</html>

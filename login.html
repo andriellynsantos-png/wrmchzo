@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>WrmLink - Login</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="login-body">
+
+  <div class="login-container">
+    <div class="login-box">
+      <h1>WrmLink</h1>
+      <p>Entre na sua conta</p>
+
+      <input type="email" id="email" placeholder="Digite seu e-mail">
+      <input type="password" id="senha" placeholder="Digite sua senha">
+
+      <button onclick="fazerLogin()">Entrar</button>
+
+      <a href="#" class="link">Esqueceu a senha?</a>
+      <a href="cadastro.html" class="link">Criar conta</a>
+    </div>
+  </div>
+
+  <script>
+    function fazerLogin() {
+      const email = document.getElementById("email").value;
+      const senha = document.getElementById("senha").value;
+
+      if (email === "" || senha === "") {
+        alert("Preencha todos os campos!");
+      } else {
+        alert("Login realizado com sucesso! Simulação.");
+        window.location.href = "inicio.html";
+      }
+    }
+  </script>
+
+</body>
+</html>
